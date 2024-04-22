@@ -1,32 +1,80 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 200px;
-}
-
-table {
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-input {
-    width: 100px;
-    text-align: center;
-}
-
-button {
-    margin: 10px;
-    padding: 5px 20px;
-}
-
 span {
     color: red;
     font-weight: bold;
     margin-left: 5px;
 }
+
+/* Base styles for the body to ensure text is readable and elements are centered */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style adjustments for the table to center it and make it responsive */
+table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px; /* Max width to avoid overly wide tables on large screens */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px 8px; /* Increase padding to make rows larger */
+    text-align: center;
+}
+
+/* Increase the font size of score cells for better readability */
+td[id^="score"] {
+    font-size: 1.5rem; /* Larger font size for scores */
+    padding: 20px 8px; /* Larger padding for better touch targets on mobile */
+}
+
+
+
+/* Base button styling */
+button {
+    margin: 5px; /* Small margin for spacing */
+    padding: 10px 20px; /* Adequate padding for easier interaction */
+    font-size: 1rem; /* Suitable font size for readability */
+    cursor: pointer; /* Pointer cursor for better UX */
+    display: inline-block; /* Allow buttons to sit side by side */
+    width: auto; /* Auto width to only be as wide as needed */
+    vertical-align: middle; /* Vertically align to look tidy */
+    box-sizing: border-box; /* Border box for better padding and border handling */
+}
+
+/* Button container to manage layout */
+.container-buttons {
+    text-align: center; /* Center-align buttons */
+    width: 100%; /* Full width to manage center alignment */
+    padding: 10px 0; /* Padding around buttons for spacing */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+    button {
+        font-size: 0.9rem; /* Slightly smaller font for small screens */
+        padding: 8px 15px; /* Smaller padding to fit small screens */
+        display: block; /* Block display to make buttons stack */
+        margin: 10px auto; /* Center buttons horizontally */
+        width: 80%; /* Adjust width to better fit mobile screens */
+    }
+
+    /* Target only the first two buttons (plus and minus) for inline display */
+    .container-buttons button:nth-child(1),
+    .container-buttons button:nth-child(2) {
+        display: inline-block; /* Revert to inline-block for plus and minus */
+        width: auto; /* Auto width for natural flow */
+    }
+
+    /* Adjust the Submit button to be on its own line */
+    .container-buttons button:nth-child(3) {
+        display: block; /* Ensure Submit is full width and on new line */
+        width: 80%; /* Make submit button wider to emphasize action */
+    }
+}
+
