@@ -85,11 +85,8 @@ function updateDisplayChange() {
         changeDisplay.textContent = pendingChange === 0 ? " 0" : (pendingChange > 0 ? " +" + pendingChange : " " + pendingChange.toString());
     }
 }
-window.addEventListener('beforeunload', function (e) {
-    // Check if there are pending changes
-    if (pendingChange !== 0) {
-        // Prevent the page from closing or refreshing
-        e.preventDefault();
-        // For some browsers, preventing the default action is enough to show the prompt
-    }
-});
+
+window.onbeforeunload = function() {
+    return "";
+}
+
