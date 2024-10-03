@@ -10,10 +10,10 @@
 <body>
     <table id="scoreTable">
         <tr>
-            <th><input type="text" placeholder="Player 1" /></th>
-            <th><input type="text" placeholder="Player 2" /></th>
-            <th><input type="text" placeholder="Player 3" /></th>
-            <th><input type="text" placeholder="Player 4" /></th>
+            <th><input type="text" id="player1" placeholder="Player 1" /></th>
+            <th><input type="text" id="player2" placeholder="Player 2" /></th>
+            <th><input type="text" id="player3" placeholder="Player 3" /></th>
+            <th><input type="text" id="player4" placeholder="Player 4" /></th>
         </tr>
         <tr>
             <td id="score1">0 <span id="change1"></span></td>
@@ -26,6 +26,14 @@
         <button onclick="prepareScoreAdjustment(-1)">-</button>
         <button onclick="prepareScoreAdjustment(1)">+</button>
         <button onclick="submitScoreChange()">OK</button>
+    </div>
+
+    <!-- History Section -->
+    <div id="history-container">
+        <h3>Recent Score Changes</h3>
+        <ul id="history-list">
+            <!-- History will be dynamically updated here -->
+        </ul>
     </div>
 
     <script src="script.js"></script>
