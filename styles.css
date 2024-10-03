@@ -76,6 +76,7 @@ button {
     background-color: #f0f0f0; /* Neutral background color */
     border: 1px solid #ccc; /* Subtle border */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover and press effects */
+    touch-action: manipulation; /* Prevent double-tap zoom */
 }
 
 /* Button hover effect */
