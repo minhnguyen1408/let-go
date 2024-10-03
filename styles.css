@@ -45,6 +45,8 @@ button {
     width: auto; /* Auto width to only be as wide as needed */
     vertical-align: middle; /* Vertically align to look tidy */
     box-sizing: border-box; /* Border box for better padding and border handling */
+    -webkit-appearance: none; /* Ensure no default Safari styles */
+    appearance: none; /* Ensure no default browser styles */
 }
 
 /* Button container to manage layout */
@@ -62,6 +64,8 @@ button {
         display: block; /* Block display to make buttons stack */
         margin: 10px auto; /* Center buttons horizontally */
         width: 80%; /* Adjust width to better fit mobile screens */
+        -webkit-appearance: none; /* Ensure no default Safari styles */
+        appearance: none; /* Ensure no default browser styles */
     }
 
     /* Target only the first two buttons (plus and minus) for inline display */
